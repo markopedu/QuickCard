@@ -16,3 +16,14 @@ struct Visit: Identifiable {
     let actions: Int
     let duration: Int
 }
+
+extension Visit {
+    
+    static func randomNumber() -> Int {
+        return Int.random(in: 1...100)
+    }
+    
+    static func randomVisit() -> Visit {
+        return Visit(views: randomNumber(), events: randomNumber(), badges: randomNumber(), actions: randomNumber(), duration: randomNumber())
+    }
+}

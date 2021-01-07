@@ -41,6 +41,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(user: User(firstName: "test", lastName: "test", title: "test dev", email: "test@gmail.com", companyUrl: "test.com", address: "test street"))
+        CardView(user: User.testUser)
     }
 }

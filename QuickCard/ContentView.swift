@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
+        
+        
+        NavigationView {
             VStack {
-                ForEach(User.users) { user in
-                    CardView(user: user)
-                        .padding(.vertical)
+                NavigationHeadingView()
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        ForEach(User.users) { user in
+                            NavigationLink(destination: VisitorInfoView(user: user)) {
+                                CardView(user: user)
+                                .padding(.vertical)
+                            }
+                        }
+                    }
                 }
             }
         }
