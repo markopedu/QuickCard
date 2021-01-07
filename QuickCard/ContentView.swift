@@ -23,6 +23,7 @@ struct ContentView: View {
                             NavigationLink(destination: VisitorInfoView(user: user)) {
                                 CardView(user: user)
                                 .padding(.vertical)
+                                
                             }
                         }
                     }
